@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Title from './components/Title';
 import RecipesContainer from './recipes/RecipesContainer';
 
@@ -40,7 +39,7 @@ class App extends Component {
       <div className="App">
       <Title content="All Recipes" />
       <Title content="A Spanish Omelette" />
-  
+
       <RecipesContainer recipes={ recipes } />
       </div>
     );
