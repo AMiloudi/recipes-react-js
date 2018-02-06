@@ -1,6 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import RecipeItem from './RecipeItem'
+import imageIcon from '../images/vegetarian.svg'
 
 const recipe = {
   title: 'Spanish Omelette',
@@ -23,12 +24,6 @@ describe('<RecipeItem />', () => {
   })
 
   it('shows a 🥕  when it is vegetarian', () => {
-    expect(container.find('ul > li')).toHaveText('🥕')
-  })
-  it('shows a 🥕  when it is pescatarian', () => {
-    expect(container.find('ul > li')).toHaveText(🐟)
-  })
-  it('shows a 🥕  when it is vegan', () => {
-    expect(container.find('ul > li')).toHaveText(🌾)
+    expect(container.find('ul > li > img')).toHaveProp('src',imageIcon)
   })
 })
